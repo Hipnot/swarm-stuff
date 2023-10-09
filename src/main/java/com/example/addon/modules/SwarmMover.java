@@ -8,12 +8,12 @@ public class SwarmMover extends Module {
 
 
     public SwarmMover() {
-        super(Addon.CATEGORY, "swarm caller", "when activeted swarm goes to your currrent location (not working)");
+        super(Addon.CATEGORY, "swarm caller", "when activeted swarm goes to your current location (not working)");
     }
 
 
     public void onActivate(){
-        ChatUtils.sendPlayerMsg(".say .swarm exec #goto {floor(camera.pos.x)} {floor(camera.pos.z)}"); //make this acutaly work (starsctripr doies not lkike it)
+        ChatUtils.sendPlayerMsg(".say .swarm exec #goto {floor(camera.pos.x)} {floor(camera.pos.z)}"); //make this acutaly work (starsctript does not like it)
         toggle();
     }
 

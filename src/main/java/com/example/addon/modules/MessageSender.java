@@ -13,7 +13,7 @@ public class MessageSender extends Module {
     private final Setting <String> message = sgGeneral.add(new StringSetting.Builder()
         .name("message")
         .description("the message that gets said")
-        .defaultValue(".say .swarm exec #goto floor(camera.pos.x)} {floor(camera.pos.z)")
+        .defaultValue(".say .swarm exec #goto floor(camera.pos.x)} {floor(camera.pos.z)") //curently broken
         .build()
     );
 
