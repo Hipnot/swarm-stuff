@@ -13,7 +13,7 @@ public class SwarmMover extends Module {
 
 
     public void onActivate(){
-        ChatUtils.sendPlayerMsg(".say .swarm exec #goto {floor(camera.pos.x)} {floor(camera.pos.z)}"); //make this acutaly work (starsctript does not like it)
+        ChatUtils.sendPlayerMsg(".say .swarm exec #goto {floor(camera.pos.x)} {floor(camera.pos.z)}"); //make this actualy work (starscript does not like it)
         toggle();
     }
 

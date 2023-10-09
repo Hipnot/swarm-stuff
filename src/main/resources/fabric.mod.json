@@ -3,7 +3,7 @@
   "id": "addon-template",
   "version": "${version}",
   "name": "Addon Template",
-  "description": "An addon template for the Meteor addons.",
+  "description": "random things that i am experementying weith",
   "authors": [
     "seasnail"
   ],

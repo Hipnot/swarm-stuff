@@ -13,13 +13,13 @@ public class MessageSender extends Module {
     private final Setting <String> message = sgGeneral.add(new StringSetting.Builder()
         .name("message")
         .description("the message that gets said")
-        .defaultValue(".say .swarm exec #goto floor(camera.pos.x)} {floor(camera.pos.z)") //curently broken
+        .defaultValue(".say .swarm exec #goto floor(camera.pos.x)} {floor(camera.pos.z)") //currently broken
         .build()
     );
 
 
     public MessageSender() {
-        super(Addon.CATEGORY, "message sender", "sends a specifyed message in chat when activated");
+        super(Addon.CATEGORY, "message sender", "sends a specified message in chat when activated");
     }
 
 
