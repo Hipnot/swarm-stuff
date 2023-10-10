@@ -13,7 +13,7 @@ public class AutoTpa extends Module {
     private final Setting <String> message = sgGeneral.add(new StringSetting.Builder()
         .name("player")
         .description("the player to tpa to")
-        .defaultValue("your name here") //currently broken
+        .defaultValue("your name here")
         .build()
     );
 
