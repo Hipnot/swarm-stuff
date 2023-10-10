@@ -1,8 +1,6 @@
-# Meteor Addon Template
+# swarm tools
 
-A template to allow easy usage of the Meteor Addon API.
+common swarm comands as moduls
 
 ### How to use:  
-- Clone this project
-- Use this template to create new modules/commands
-- Run the mod with Meteor.
+put the file in mods folder with metior.
