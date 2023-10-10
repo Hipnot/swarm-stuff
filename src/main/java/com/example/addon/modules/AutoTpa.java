@@ -7,26 +7,24 @@ import meteordevelopment.meteorclient.settings.StringSetting;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 
-
-//useles adition cus macros.
-public class MessageSender extends Module {
+public class AutoTpa extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
     private final Setting <String> message = sgGeneral.add(new StringSetting.Builder()
-        .name("message")
-        .description("the message that gets said")
-        .defaultValue(".say .swarm exec #goto floor(camera.pos.x)} {floor(camera.pos.z)") //currently broken
+        .name("player")
+        .description("the player to tpa to")
+        .defaultValue("your name here") //currently broken
         .build()
     );
 
 
-    public MessageSender() {
-        super(Addon.CATEGORY, "message sender", "sends a specified message in chat when activated");
+    public AutoTpa() {
+        super(Addon.CATEGORY, "auto tpa", "makes all bots run /tpa to you");
     }
 
 
     public void onActivate(){
-        ChatUtils.sendPlayerMsg(message.get()); //sends te mesasange
+        ChatUtils.sendPlayerMsg(".swarm exec /tpa " + message.get()); //sends te mesasange
         toggle();
     }
 

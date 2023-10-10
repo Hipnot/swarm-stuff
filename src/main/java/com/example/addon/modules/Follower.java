@@ -7,26 +7,24 @@ import meteordevelopment.meteorclient.settings.StringSetting;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 
-
-//useles adition cus macros.
-public class MessageSender extends Module {
+public class Follower extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
     private final Setting <String> message = sgGeneral.add(new StringSetting.Builder()
-        .name("message")
-        .description("the message that gets said")
-        .defaultValue(".say .swarm exec #goto floor(camera.pos.x)} {floor(camera.pos.z)") //currently broken
+        .name("name'")
+        .description("the name of the player that you want the bots to follow (probibly put your name)")
+        .defaultValue("playur name here")
         .build()
     );
 
 
-    public MessageSender() {
-        super(Addon.CATEGORY, "message sender", "sends a specified message in chat when activated");
+    public Follower() {
+        super(Addon.CATEGORY, "player follower ", "makes the bots folllow the specifyed player");
     }
 
 
     public void onActivate(){
-        ChatUtils.sendPlayerMsg(message.get()); //sends te mesasange
+        ChatUtils.sendPlayerMsg(".swarm follow " + message.get()); //sends te mesasange
         toggle();
     }
 

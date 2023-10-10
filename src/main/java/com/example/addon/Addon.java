@@ -3,8 +3,11 @@ package com.example.addon;
 import com.example.addon.commands.CommandExample;
 import com.example.addon.hud.HudExample;
 import com.example.addon.modules.MessageSender;
-import com.example.addon.modules.ModuleExample;
 import com.example.addon.modules.SwarmMover;
+import com.example.addon.modules.Follower;
+import com.example.addon.modules.AutoTpa;
+import com.example.addon.modules.Stop;
+import com.example.addon.modules.scater;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.commands.Commands;
@@ -25,8 +28,13 @@ public class Addon extends MeteorAddon {
 
         // Modules
         Modules.get().add(new MessageSender());
-        Modules.get().add(new ModuleExample());
         Modules.get().add(new SwarmMover());
+        Modules.get().add(new Follower());
+        Modules.get().add(new AutoTpa());
+        Modules.get().add(new Stop());
+        Modules.get().add(new scater());
+
+
 
         // Commands
         Commands.add(new CommandExample());

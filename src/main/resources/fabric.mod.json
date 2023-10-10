@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "id": "addon-template",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "random things that i am experementying weith",
+  "name": "Swarm Quick Tools",
+  "description": "random Swarm Commands in the ui",
   "authors": [
-    "seasnail"
+    "HypNot"
   ],
   "contact": {
     "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"

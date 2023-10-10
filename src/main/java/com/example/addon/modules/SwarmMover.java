@@ -4,16 +4,22 @@ import com.example.addon.Addon;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 
+import meteordevelopment.meteorclient.MeteorClient;
+import static meteordevelopment.meteorclient.MeteorClient.mc;
+
 public class SwarmMover extends Module {
 
 
     public SwarmMover() {
-        super(Addon.CATEGORY, "swarm caller", "when activeted swarm goes to your current location (not working)");
+        super(Addon.CATEGORY, "swarm caller (CRASHES)", "when activeted swarm goes to your current location. bots do not follow you they just go to your current quardanants");
     }
 
 
+    //how get player quardanants bro.
     public void onActivate(){
-        ChatUtils.sendPlayerMsg(".say .swarm exec #goto {floor(camera.pos.x)} {floor(camera.pos.z)}"); //make this actualy work (starscript does not like it)
+        double playerX = mc.player.getX();
+        double playerY = mc.player.getY();
+        ChatUtils.sendPlayerMsg(".swarm exec #goto " + playerX + " " + playerY); //make this actualy work
         toggle();
     }
 
