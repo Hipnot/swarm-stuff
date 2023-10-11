@@ -2,12 +2,16 @@ package com.example.addon;
 
 import com.example.addon.commands.CommandExample;
 import com.example.addon.hud.HudExample;
+
 import com.example.addon.modules.MessageSender;
 import com.example.addon.modules.SwarmMover;
 import com.example.addon.modules.Follower;
 import com.example.addon.modules.AutoTpa;
 import com.example.addon.modules.Stop;
 import com.example.addon.modules.scater;
+import com.example.addon.modules.Spin;
+
+
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.commands.Commands;
@@ -33,6 +37,8 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new AutoTpa());
         Modules.get().add(new Stop());
         Modules.get().add(new scater());
+        Modules.get().add(new Spin());
+
 
 
 
